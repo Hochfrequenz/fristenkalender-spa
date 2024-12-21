@@ -97,7 +97,7 @@
       </h2>
     </div>
     <div class="px-24 py-12">
-      <DownloadButton />
+      <DownloadButton {selectedYear} />
     </div>
   </div>
   <div class="flex-1 min-h-0 px-24 pb-1">
