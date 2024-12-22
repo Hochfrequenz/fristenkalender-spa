@@ -10,7 +10,7 @@
   export let selectedYear: number;
 
   let isDownloading = false;
-  let cooldownTime = 10; // 3s download cooldown
+  let cooldownTime = 3; // 3s download cooldown
   let cooldownRemaining = 0;
   let cooldownInterval: number | null = null;
 
