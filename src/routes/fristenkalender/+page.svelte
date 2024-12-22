@@ -4,7 +4,7 @@
   import { goto } from "$app/navigation";
   import { base } from "$app/paths";
   import { page } from "$app/stores";
-  import { Header } from "$lib/components";
+  import { DownloadButton, Header } from "$lib/components";
   import CalendarTable from "$lib/components/features/calendar-table.svelte";
   import type { MonthValue } from "$lib/types/calendar-month";
   import type { TypeValue } from "$lib/types/calendar-type";
@@ -84,16 +84,21 @@
 
 <div class="flex flex-col h-full bg-tint">
   <Header bind:selectedYear bind:selectedMonth bind:selectedType />
-  <div class="flex flex-col px-24 py-12">
-    <h1 class="text-2xl font-medium text-black/70">
-      {monthNameMap[selectedMonth].charAt(0).toUpperCase() +
-        monthNameMap[selectedMonth].slice(1)}
-      {selectedYear}
-    </h1>
-    <h2 class="text-xl text-black/70">
-      Netzzugangsthemen: {typeNames.find((t) => t.value === selectedType)
-        ?.label || "alle"}
-    </h2>
+  <div class="flex flex-row justify-between">
+    <div class="flex flex-col px-24 py-12">
+      <h1 class="text-2xl font-medium text-black/70">
+        {monthNameMap[selectedMonth].charAt(0).toUpperCase() +
+          monthNameMap[selectedMonth].slice(1)}
+        {selectedYear}
+      </h1>
+      <h2 class="text-xl text-black/70">
+        Netzzugangsthemen: {typeNames.find((t) => t.value === selectedType)
+          ?.label || "alle"}
+      </h2>
+    </div>
+    <div class="px-24 py-12">
+      <DownloadButton {selectedYear} />
+    </div>
   </div>
   <div class="flex-1 min-h-0 px-24 pb-1">
     <CalendarTable {selectedYear} {selectedMonth} {selectedType} />
