@@ -4,7 +4,7 @@
   import { goto } from "$app/navigation";
   import { base } from "$app/paths";
   import { page } from "$app/stores";
-  import { DownloadButton, GlossaryToggle,Header } from "$lib/components";
+  import { DownloadButton, GlossaryToggle, Header } from "$lib/components";
   import CalendarTable from "$lib/components/features/calendar-table.svelte";
   import type { MonthValue } from "$lib/types/calendar-month";
   import type { TypeValue } from "$lib/types/calendar-type";
