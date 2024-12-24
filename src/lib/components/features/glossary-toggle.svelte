@@ -29,7 +29,6 @@
       <div
         class="w-90 bg-primary shadow-lg p-3 rounded-r-lg h-[50vh] overflow-y-auto"
       >
-        <!-- Added wrapper div with opacity transition -->
         <div
           class="transition-opacity duration-300"
           class:opacity-0={!isOpen}
@@ -51,7 +50,6 @@
         </div>
       </div>
 
-      <!-- Toggle button that moves with the sidebar -->
       <button
         on:click={toggleSidebar}
         class="absolute top-1/2 -translate-y-1/2 -right-5 bg-tint rounded-full p-1 hover:scale-110 transition-transform duration-200"
